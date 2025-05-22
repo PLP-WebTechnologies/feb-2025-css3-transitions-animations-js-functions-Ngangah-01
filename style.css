@@ -1,0 +1,227 @@
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3a0ca3;
+    --accent-color: #4cc9f0;
+    --text-color: #2b2d42;
+    --bg-color: #f8f9fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Theme color classes */
+body.blue {
+    --primary-color: #4361ee;
+    --secondary-color: #3a0ca3;
+    --accent-color: #4cc9f0;
+}
+
+body.green {
+    --primary-color: #2b9348;
+    --secondary-color: #007f5f;
+    --accent-color: #80b918;
+}
+
+body.purple {
+    --primary-color: #7209b7;
+    --secondary-color: #560bad;
+    --accent-color: #b5179e;
+}
+
+body.red {
+    --primary-color: #d90429;
+    --secondary-color: #ef233c;
+    --accent-color: #ff758f;
+}
+
+.preferences-panel {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+}
+
+.preferences-panel:hover {
+    transform: translateY(-5px);
+}
+
+.preferences-panel h1 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.preference-option {
+    margin-bottom: 25px;
+}
+
+.preference-option h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+.color-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.color-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.color-option.blue {
+    background-color: #4361ee;
+}
+
+.color-option.green {
+    background-color: #2b9348;
+}
+
+.color-option.purple {
+    background-color: #7209b7;
+}
+
+.color-option.red {
+    background-color: #d90429;
+}
+
+.color-option.selected {
+    border-color: var(--text-color);
+    transform: scale(1.1);
+    box-shadow: 0 0 0 3px var(--accent-color);
+}
+
+.animation-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.animation-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.animation-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.animation-btn.selected {
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+.demo-element {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.demo-element:hover {
+    background-color: var(--secondary-color);
+}
+
+.demo-element i {
+    font-size: 2rem;
+}
+
+.reset-btn {
+    display: block;
+    margin: 30px auto 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e63946;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+    background-color: #c1121f;
+    transform: translateY(-2px);
+}
+
+/* Animation classes */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.bounce-animation {
+    animation: bounce 0.8s infinite;
+}
+
+.pulse-animation {
+    animation: pulse 1s infinite;
+}
+
+.rotate-animation {
+    animation: rotate 2s linear infinite;
+}
+
+.shake-animation {
+    animation: shake 0.5s infinite;
+}

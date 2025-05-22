@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Preferences with Animations</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="preferences-panel">
+        <h1><i class="fas fa-cog"></i> User Preferences</h1>
+        
+        <div class="preference-option">
+            <h2>Theme Color</h2>
+            <div class="color-options">
+                <div class="color-option blue" data-color="blue"></div>
+                <div class="color-option green" data-color="green"></div>
+                <div class="color-option purple" data-color="purple"></div>
+                <div class="color-option red" data-color="red"></div>
+            </div>
+        </div>
+        
+        <div class="preference-option">
+            <h2>Animation Style</h2>
+            <div class="animation-options">
+                <button class="animation-btn bounce" data-animation="bounce">Bounce</button>
+                <button class="animation-btn pulse" data-animation="pulse">Pulse</button>
+                <button class="animation-btn rotate" data-animation="rotate">Rotate</button>
+                <button class="animation-btn shake" data-animation="shake">Shake</button>
+            </div>
+        </div>
+        
+        <div class="preference-option">
+            <h2>Demo Element</h2>
+            <div id="demo-element" class="demo-element">
+                <i class="fas fa-star"></i> Click Me!
+            </div>
+        </div>
+        
+        <button id="reset-btn" class="reset-btn">
+            <i class="fas fa-trash-alt"></i> Reset Preferences
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
